@@ -1,15 +1,29 @@
 import './App.css';
-// import CatList from './components/CatList';
 import DogList from './components/DogList'
 import Dog from './components/Dog'
 
 function App() {
-  return (
-    <main>
-      <h1>List of Dogs</h1>
-      <DogList />
-      <Dog />
-    </main>
+  const dogData = [
+    {
+      name: "Whiskers",
+      caretaker: "Farah",
+    },
+    {
+      name: "Fang",
+      caretaker: "Luciana",
+    },
+    {
+      name: "Beetle",
+      caretaker: "Aya",
+    },
+  ];
+
+return (
+<main>
+  <h1>List of Dogs</h1>
+    <Dog />
+    <DogList dogData={dogData} />
+</main>
   );
 }
 
